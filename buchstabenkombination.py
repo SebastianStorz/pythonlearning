@@ -3,5 +3,4 @@
 alphabet= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for a in alphabet:
     for b in alphabet:
-        for c in alphabet:
-            print(a+b-c)
+            print(a+b)
