@@ -2,7 +2,7 @@
 
 class Ding(object):
 
-    __dichte = { 'Fe' : ('Eisen' , 7.87),
+    _dichte = { 'Fe' : ('Eisen' , 7.87),
                 'Au' : ('Gold' , 19.32),
                 'Ag' : ('Silber' , 10.5)}
     
@@ -11,15 +11,14 @@ class Ding(object):
         self._symbol = symbol
 
     def getMasse(self):
-        return self.__volumen*self.__dichte[self._symbol][1]
+        return self.__volumen*self._dichte[self._symbol][1]
     
     def getVolumen(self):
         return self.__volumen
 
     def __str__(self):
-        beschrb = 'Symbol: ' + str(self.__dichte[self._symbol][1])\
+        beschrb = 'Name: ' + str(self._dichte[self._symbol][0])\
         + ' Masse: ' + str(self.getMasse())
         return beschrb
 
-krone= Ding('Au',100)
-print(krone)
+
